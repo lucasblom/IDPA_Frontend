@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* --- General Styling for consistency --- */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: black;
+  overflow-x: hidden;
+  border: none;
+  text-decoration: none;
+}
+
+
+body {
+    background-color: white;
+}
+
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+span {
+  font-weight: 500;
+}
+
+button{
+  background-color: #DEE2E6;
+  width: 7rem;
+  padding: 1rem;
+  border-radius: 0 1rem 0 1rem;
+}
+
+
+/* --- components/Nav_element.jsx  --- */
+
+#nav{
+  height: 3rem;
+  aspect-ratio: 3/1;
+  position: fixed;
+  bottom: 2rem;
+  background-color: lightblue;
+  border-radius: 1.5rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.information-banner{
+  width: 100vw;
+  aspect-ratio: 3/2;
+  border-radius: 0 0 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+
+/* --- components/Profile_view.jsx --- */
+
+#profile-view{
+  background-color: #DEE2E6;
+
+  gap: 1.5rem;
+  padding-top: 3rem;
+}
+
+#welcome{
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+}
+
+#profile-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#points {
+  font-size: x-small;
+}
+
+
+/* --- components/Recently_viewed.jsx --- */
+
+#sub-category{
+  height: fit-content;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#recently-viewed-sets{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+
+/* --- components/Set_thumbnail.jsx --- */
+
+#set-thumbnail{
+  width: 80vw;
+  aspect-ratio: 3/2;
+  border-radius: 0 2rem 0 2rem;
+  background-color: #DEE2E6;
+
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  gap: auto;
+}
+
+#set-title{
+  padding: 1rem;
+}
+
+
+#set-creator{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#set-creator-profile-picture{
+  height: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 1.5rem;
+}
+
+
+/* --- components/Upload.jsx --- */
+
+#selection{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.upload {
+  width: 8rem;
+}
+
+
+/* --- French-Revolution/Title_card.jsx --- */
+#title-card{
+  background-image: url('https://images.unsplash.com/photo-1549884002-16e635ebc31d?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+
+#title-card h1{
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 10px black;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+}
+#set-information {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+#information{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 5rem;
+}
+
+#information span{
+  color: white;
+}
+
+#date{
+  color: white;
+}
+
+#creator{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#creator h4{
+  color: white;
+}
+
+
+/* --- French-Revolution/TermsContainer.jsx --- */
+
+#terms-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vw;
+}
+
+#study-method{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.study-options {
+  background-color: #DEE2E6;
+  width: 7rem;
+  padding: 1rem;
+  border-radius: 0 1rem 0 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* --- French-Revolution/Terms.jsx*/
+
+#term-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #DEE2E6;
+  border-radius: 1rem;
+}
+
+
+/* --- French-Revolution/timeline/Timeline_item.jsx --- */
+#timeline-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  width: 90vw;
+  aspect-ratio: 3/1;
+  margin-top: -2px;
+}
+
+.timeline-item-content {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.timeline-item-content p{
+  font-size: small;
+  text-align: center;
+}
+
+
+/* --- French-Revolution/timeline/Timeline_container.jsx --- */
+
+#timeline-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  gap: -1px;
+}
+
+
+/* --- add-set/index.jsx --- */
+
+#set-list-viwe {
+  padding: 2rem;
+}
+
+#existing{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+}
+
+
+/* --- French-Revolution/Study/Flash_cards --- */
+
